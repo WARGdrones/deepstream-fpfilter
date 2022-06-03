@@ -30,7 +30,7 @@ USER_PROMPT_APP:=ds-fpfilter-manager
 
 TARGET_DEVICE = $(shell gcc -dumpmachine | cut -f1 -d -)
 
-NVDS_VERSION:=5.1
+NVDS_VERSION:=6.1
 
 LIB_INSTALL_DIR?=/opt/nvidia/deepstream/deepstream-$(NVDS_VERSION)/lib/
 APP_INSTALL_DIR?=/opt/nvidia/deepstream/deepstream-$(NVDS_VERSION)/bin/
@@ -57,7 +57,7 @@ CFLAGS+= -DFILE_SINK
 #CFLAGS+= -DVIDEO_RENDER_SINK
 
 CFLAGS += -I./include
-CFLAGS+= -I/opt/nvidia/deepstream/deepstream-5.1/sources/includes \
+CFLAGS+= -I/opt/nvidia/deepstream/deepstream-6.1/sources/includes \
 				-I /usr/local/cuda-$(CUDA_VER)/include
 
 CFLAGS+= $(shell pkg-config --cflags $(PKGS))
